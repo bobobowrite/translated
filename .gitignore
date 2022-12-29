@@ -130,3 +130,4 @@ dmypy.json
 
 *.md.html
 *.sw[po]
+.DS_Store

@@ -3,16 +3,16 @@
 有时一个完全定制化的负载测试无法通过简单的设置或者修改用户数量和产生速率来实现.
 
 例如你可能需要产生一个负载高峰或者在特定的时间上升和下降负载. 通过使
-用*LoadTestShape*类你可以全程完全控制用户数量和产生速率.
+用***LoadTestShape***类你可以全程完全控制用户数量和产生速率.
 
-在你的locust文件中定义一个继承*LoadTestShape*的子类.
+在你的locust文件中定义一个继承***LoadTestShape***的子类.
 Locust可以自动发现这个类型并且使用.
 
-你在这个类里定义一个*tick()*方法, 返回一个包含用户数量和产生速率的元组
-(或者*None*来停止测试).
-Locust大约每秒一次将会调用*tick()*方法.
+你在这个类里定义一个***tick()***方法, 返回一个包含用户数量和产生速率的元组
+(或者***None***来停止测试).
+Locust大约每秒一次将会调用***tick()***方法.
 
-你还可以调用这个类的*get_run_time()*方法, 来获取测试的运行时长.
+你还可以调用这个类的***get_run_time()***方法, 来获取测试的运行时长.
 
 ## 例子
 
@@ -41,7 +41,7 @@ Locust大约每秒一次将会调用*tick()*方法.
 - 像Visual Studio的单步负载模式
 
 一个能够为你定制负载模型提供帮助的更进一步的方法是
-*get_current_user_count()*, 这个方法返回激活用户的总数.
+***get_current_user_count()***, 这个方法返回激活用户的总数.
 
 这个方法可以用来阻止在足够数量的用户产生之前就进行了后续步骤.
 这在每个用户初始化过程低速或者耗时不稳定时尤其有用.
@@ -50,7 +50,7 @@ Locust大约每秒一次将会调用*tick()*方法.
 
 ## 用不同的负载配置组合用户
 
-如果你使用Web UI, 可以添加参数*---class-picker <class-picker>*来选择使用什么负载模型.
+如果你使用Web UI, 可以添加参数***---class-picker <class-picker>***来选择使用什么负载模型.
 但是让你的User定义和LoadTestShape在不同的文件通常更加灵活.
 例如, 如果你的高负载和低负载分别定义在high_load.py和low_load.py中:
 
@@ -62,7 +62,7 @@ Locust大约每秒一次将会调用*tick()*方法.
 
 ## 限定每次产生的用户类型
 
-加入*user_classes*元素让你能够更精细地控制:
+加入***user_classes***元素让你能够更精细地控制:
 
 ```
     class StagesShapeWithCustomUsers(LoadTestShape):

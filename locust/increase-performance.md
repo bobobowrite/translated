@@ -4,7 +4,7 @@ Locust默认的HTTP客户端是[python-requests](http://www.python-requests.org/
 它提高了一个很友好的API, 为众多python程序员所熟悉, 并被维护地良好.
 但是如果你想进行更高吞吐量的测试, 而且又有有限的硬件资源时, 它就显得不够高效了.
 
-因此, Locust提供了类*FastHttpUser <locust.contrib.fasthttp.FastHttpUser>*
+因此, Locust提供了类***FastHttpUser <locust.contrib.fasthttp.FastHttpUser>***
 该类使用的是[geventhttpclient](https://github.com/gwik/geventhttpclient/),
 它提供了一个相似的API并且显著地使用更少的CPU时间, 有时能够在给定的硬件
 条件下提高每秒最大请求数5到6倍.
