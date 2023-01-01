@@ -216,30 +216,26 @@ TPR衡量了恶意事件被正确识别和报告的数量.
 
 #### 2.1.2 ROC曲线
 
-Receiver Operating Characteristic (ROC) curves are often used to
-evaluate the quality of an IDS (see [7] and [8] for more information
-on ROC Curve analysis).
-A ROC curve is a two-dimensional depiction of the accuracy of a
-signal detector, as it arises on a given set of testing data. Two
-dimensions are required to show the whole story of how the
-true-positive rate of detection decreases as the false-positive rate
-of error increases. The purpose of a ROC curve is to indicate the
-accuracy of the corresponding signal detector. This accuracy
-information, revealed in the shape of the curve, is two-dimensional
-because there are two kinds of events, and hence two kinds of
-accuracies possible. The first di- mension is the success rate of
-detecting signal events, which is shown along the y-axis (the
-vertical axis). The second dimension is the error rate of falsely
-identifying noise events, which is shown along the x-axis (the
-horizontal axis). Since success is good and error is bad, a good ROC
-curve will have y-values which grow at a faster rate than its
-x-values, resulting in a curve shape which rises swiftly upward.
-Later on, as the decision threshold changes to become more and more
-lenient, the error values for noise (x-values) must also
+接受者操作特征(ROC)曲线通常用于评估 IDS 的质量
+(参见[7]和[8]有关更多关于 ROC 曲线分析信息).
 
-grow large, catching up with the success values for signals
-(y-values). This makes the curve bend over to the right, until it
-touches the point (0,1)[7].
+ROC曲线是对信号检测器准确性的二维描述, 它产生于一组给定的测试数据.
+需要两个维度来展示真阳性检测率随着假阳性率的增加而降低的整个过程.
+ROC曲线的目的是表明相应信号检测器的精度. 
+
+以曲线形状展示的精度信息是二维的, 这是因为有两种事件，因此有两种
+可能的准确性.
+
+第一个维度是检测信号事件的成功率, 沿y轴显示(纵轴).
+第二个维度是错误识别噪声事件的错误率, 沿x轴显示(横轴).
+
+因为成功是好的, 错误是坏的, 
+一个好的ROC曲线的y值应该以比x值其更快的速率增长, 从而曲线形状迅速抬升.
+
+之后, 随着决策门槛的变得越来越放宽, 噪声的误差值(x值)也必须
+变大, 赶上信号的成功值(y值).
+这使得曲线向右弯曲, 直到它触及点(0,1)[7]。
+
 The ROC curve for an IDS is basically the plot between the TPR and
 the FPR rates as the threshold value is varied, in order to show the
 tradeoff between them. It is obtained by tuning the IDS to tradeoff
