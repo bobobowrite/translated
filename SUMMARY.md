@@ -10,4 +10,7 @@
     * [TaskSet](locust/tasksets.md)
     * [提高性能](locust/increase-performance.md)
 * 论文翻译
-    * [ANOMALY DETECTION OF WEB-BASED ATTACKS](papers/ANOMALY...md)
+    * ANOMALY DETECTION OF WEB-BASED ATTACKS
+        * [Chapter 1](papers/ANOMALY...1.md)
+        * [Chapter 2](papers/ANOMALY...2.md)
+        * [Chapter 3](papers/ANOMALY...3.md)
